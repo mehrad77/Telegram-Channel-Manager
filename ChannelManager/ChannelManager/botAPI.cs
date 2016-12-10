@@ -68,10 +68,10 @@ namespace ChannelManager
         /// </summary>
         /// <param name="photo">This is the photo URL</param>
         /// <param name="message">The caption of the picture</param>
-        public static void sendMessage(string message)
+        public static void sendMessage(string message, Boolean disable_notification)
         {
             WebRequest req = WebRequest.Create(httpReq + token + "/sendMessage"
-                + channelUserName + "&text=" + message + "&parse_mode=HTML");
+                + channelUserName + "&text=" + message + "&parse_mode=HTML" + "&disable_notification=" + disable_notification);
             req.UseDefaultCredentials = true;
 
             var result = req.GetResponse();
@@ -89,10 +89,10 @@ namespace ChannelManager
         /// </summary>
         /// <param name="photo">This is the photo URL</param>
         /// <param name="message">The caption of the picture</param>
-        public static void sendPhoto(string photo, string message)
+        public static void sendPhoto(string photo, string message, Boolean disable_notification)
         {
             WebRequest req = WebRequest.Create(httpReq + token + "/sendPhoto"
-                + channelUserName + "&photo=" + photo + "&caption=" + message);
+                + channelUserName + "&photo=" + photo + "&caption=" + message + "&disable_notification=" + disable_notification);
             req.UseDefaultCredentials = true;
 
             var result = req.GetResponse();

@@ -55,10 +55,34 @@ namespace ChannelManager
                 btnSet.Enabled = false;
         }
 
+
+
+
+
+
+
+
+        //---------------------------------------------------
         private void btnSendMsg_Click(object sender, EventArgs e)
         {
-            botAPI.sendMessage(boxMsg.Text);
+            
+            botAPI.sendMessage(boxMsg.Text,chkSilence.Checked);
             MessageBox.Show("Sent!");
         }
+        //---------------------------------------------------
+
+
+
+        //---------------------------------------------------
+        private void btnSendPicture_Click(object sender, EventArgs e)
+        {
+            botAPI.sendPhoto(boxPictureURL.Text, boxCaption.Text, chkSilence2.Checked);
+            MessageBox.Show("Sent!");
+        }
+        //---------------------------------------------------
+
+
+
+
     }
 }

@@ -35,18 +35,35 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.btnSendMsg = new System.Windows.Forms.Button();
             this.boxMsg = new System.Windows.Forms.TextBox();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.txtBotName = new System.Windows.Forms.Label();
             this.boxUser = new System.Windows.Forms.TextBox();
             this.txtChannelUser = new System.Windows.Forms.Label();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.msgHint = new System.Windows.Forms.RichTextBox();
+            this.chkSilence = new System.Windows.Forms.CheckBox();
+            this.chkSilence2 = new System.Windows.Forms.CheckBox();
+            this.btnSendPicture = new System.Windows.Forms.Button();
+            this.boxCaption = new System.Windows.Forms.TextBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.boxPictureURL = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSet
             // 
             this.btnSet.Enabled = false;
-            this.btnSet.Location = new System.Drawing.Point(516, 15);
+            this.btnSet.Location = new System.Drawing.Point(502, 15);
             this.btnSet.Name = "btnSet";
             this.btnSet.Size = new System.Drawing.Size(54, 49);
             this.btnSet.TabIndex = 0;
@@ -58,7 +75,7 @@
             // 
             this.boxToken.Location = new System.Drawing.Point(77, 15);
             this.boxToken.Name = "boxToken";
-            this.boxToken.Size = new System.Drawing.Size(433, 20);
+            this.boxToken.Size = new System.Drawing.Size(419, 20);
             this.boxToken.TabIndex = 1;
             this.boxToken.TextChanged += new System.EventHandler(this.boxToken_TextChanged);
             // 
@@ -76,27 +93,29 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Enabled = false;
-            this.tabControl1.Location = new System.Drawing.Point(15, 70);
+            this.tabControl1.Location = new System.Drawing.Point(1, 70);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(562, 339);
+            this.tabControl1.Size = new System.Drawing.Size(777, 339);
             this.tabControl1.TabIndex = 3;
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.chkSilence);
+            this.tabPage1.Controls.Add(this.msgHint);
             this.tabPage1.Controls.Add(this.btnSendMsg);
             this.tabPage1.Controls.Add(this.boxMsg);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(554, 313);
+            this.tabPage1.Size = new System.Drawing.Size(769, 313);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Send Message";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // btnSendMsg
             // 
-            this.btnSendMsg.Location = new System.Drawing.Point(419, 259);
+            this.btnSendMsg.Location = new System.Drawing.Point(422, 258);
             this.btnSendMsg.Name = "btnSendMsg";
             this.btnSendMsg.Size = new System.Drawing.Size(129, 49);
             this.btnSendMsg.TabIndex = 7;
@@ -106,12 +125,30 @@
             // 
             // boxMsg
             // 
-            this.boxMsg.Location = new System.Drawing.Point(6, 6);
+            this.boxMsg.Location = new System.Drawing.Point(7, 7);
             this.boxMsg.Multiline = true;
             this.boxMsg.Name = "boxMsg";
             this.boxMsg.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.boxMsg.Size = new System.Drawing.Size(538, 247);
+            this.boxMsg.Size = new System.Drawing.Size(544, 246);
             this.boxMsg.TabIndex = 1;
+            this.boxMsg.Text = "The Message...";
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.radioButton2);
+            this.tabPage2.Controls.Add(this.radioButton1);
+            this.tabPage2.Controls.Add(this.groupBox2);
+            this.tabPage2.Controls.Add(this.groupBox1);
+            this.tabPage2.Controls.Add(this.chkSilence2);
+            this.tabPage2.Controls.Add(this.btnSendPicture);
+            this.tabPage2.Controls.Add(this.boxCaption);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(769, 313);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Send Photo";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // txtBotName
             // 
@@ -119,7 +156,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtBotName.AutoSize = true;
-            this.txtBotName.Location = new System.Drawing.Point(576, 22);
+            this.txtBotName.Location = new System.Drawing.Point(588, 22);
             this.txtBotName.Name = "txtBotName";
             this.txtBotName.Size = new System.Drawing.Size(37, 13);
             this.txtBotName.TabIndex = 4;
@@ -130,7 +167,7 @@
             // 
             this.boxUser.Location = new System.Drawing.Point(118, 41);
             this.boxUser.Name = "boxUser";
-            this.boxUser.Size = new System.Drawing.Size(392, 20);
+            this.boxUser.Size = new System.Drawing.Size(378, 20);
             this.boxUser.TabIndex = 5;
             this.boxUser.TextChanged += new System.EventHandler(this.boxUser_TextChanged);
             // 
@@ -143,21 +180,142 @@
             this.txtChannelUser.TabIndex = 6;
             this.txtChannelUser.Text = "Channel Username:";
             // 
-            // tabPage2
+            // msgHint
             // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(554, 313);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Send Photo";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.msgHint.Location = new System.Drawing.Point(557, 7);
+            this.msgHint.Name = "msgHint";
+            this.msgHint.ReadOnly = true;
+            this.msgHint.Size = new System.Drawing.Size(207, 299);
+            this.msgHint.TabIndex = 8;
+            this.msgHint.Text = "You can use HTML tags in your message:\n\n- <b> bold </b>\n- <i> italic </i>\n- <a hr" +
+    "ef=\"\"> URL </a>\n- <code> fixed-width code </code>\n- <pre> pre-formatted block </" +
+    "pre>";
+            // 
+            // chkSilence
+            // 
+            this.chkSilence.AutoSize = true;
+            this.chkSilence.Location = new System.Drawing.Point(10, 259);
+            this.chkSilence.Name = "chkSilence";
+            this.chkSilence.Size = new System.Drawing.Size(156, 17);
+            this.chkSilence.TabIndex = 9;
+            this.chkSilence.Text = "\tSends the message silently.";
+            this.chkSilence.UseVisualStyleBackColor = true;
+            // 
+            // chkSilence2
+            // 
+            this.chkSilence2.AutoSize = true;
+            this.chkSilence2.Location = new System.Drawing.Point(10, 258);
+            this.chkSilence2.Name = "chkSilence2";
+            this.chkSilence2.Size = new System.Drawing.Size(156, 17);
+            this.chkSilence2.TabIndex = 13;
+            this.chkSilence2.Text = "Sends the message silently.";
+            this.chkSilence2.UseVisualStyleBackColor = true;
+            // 
+            // btnSendPicture
+            // 
+            this.btnSendPicture.Location = new System.Drawing.Point(421, 258);
+            this.btnSendPicture.Name = "btnSendPicture";
+            this.btnSendPicture.Size = new System.Drawing.Size(129, 49);
+            this.btnSendPicture.TabIndex = 11;
+            this.btnSendPicture.Text = "Send!";
+            this.btnSendPicture.UseVisualStyleBackColor = true;
+            this.btnSendPicture.Click += new System.EventHandler(this.btnSendPicture_Click);
+            // 
+            // boxCaption
+            // 
+            this.boxCaption.Location = new System.Drawing.Point(10, 91);
+            this.boxCaption.Multiline = true;
+            this.boxCaption.Name = "boxCaption";
+            this.boxCaption.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.boxCaption.Size = new System.Drawing.Size(540, 162);
+            this.boxCaption.TabIndex = 10;
+            this.boxCaption.Text = "Picture Caption...";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.boxPictureURL);
+            this.groupBox1.Location = new System.Drawing.Point(10, 29);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(540, 56);
+            this.groupBox1.TabIndex = 16;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Picture URL";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.textBox1);
+            this.groupBox2.Controls.Add(this.button2);
+            this.groupBox2.Controls.Add(this.pictureBox1);
+            this.groupBox2.Enabled = false;
+            this.groupBox2.Location = new System.Drawing.Point(556, 29);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(204, 223);
+            this.groupBox2.TabIndex = 17;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Upload Picture";
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Checked = true;
+            this.radioButton1.Location = new System.Drawing.Point(10, 6);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(127, 17);
+            this.radioButton1.TabIndex = 15;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Add picture from URL";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Enabled = false;
+            this.radioButton2.Location = new System.Drawing.Point(556, 8);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(158, 17);
+            this.radioButton2.TabIndex = 18;
+            this.radioButton2.Text = "Upload Picture from your PC";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // boxPictureURL
+            // 
+            this.boxPictureURL.Location = new System.Drawing.Point(7, 20);
+            this.boxPictureURL.Name = "boxPictureURL";
+            this.boxPictureURL.Size = new System.Drawing.Size(527, 20);
+            this.boxPictureURL.TabIndex = 0;
+            this.boxPictureURL.Text = "https://example.prg/sample.jpg";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(7, 20);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(191, 168);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(140, 194);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(57, 23);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "Choose";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Enabled = false;
+            this.textBox1.Location = new System.Drawing.Point(7, 195);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(127, 20);
+            this.textBox1.TabIndex = 2;
+            this.textBox1.Text = "...";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(740, 410);
+            this.ClientSize = new System.Drawing.Size(777, 410);
             this.Controls.Add(this.txtChannelUser);
             this.Controls.Add(this.boxUser);
             this.Controls.Add(this.txtBotName);
@@ -171,6 +329,13 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -189,6 +354,19 @@
         private System.Windows.Forms.Button btnSendMsg;
         private System.Windows.Forms.TextBox boxMsg;
         private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.RichTextBox msgHint;
+        private System.Windows.Forms.CheckBox chkSilence;
+        private System.Windows.Forms.CheckBox chkSilence2;
+        private System.Windows.Forms.Button btnSendPicture;
+        private System.Windows.Forms.TextBox boxCaption;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.TextBox boxPictureURL;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
