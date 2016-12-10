@@ -20,9 +20,11 @@ namespace ChannelManager
 
         private void buttonSet_Click(object sender, EventArgs e)
         {
-            txtBotName.Text = botAPI.set(boxToken.Text);
+            txtBotName.Text = botAPI.set(boxToken.Text, boxUser.Text);
             System.IO.File.WriteAllText("token.txt", boxToken.Text);
+            System.IO.File.WriteAllText("user.txt", boxUser.Text);
             if (txtBotName.Text != "ERROR!! Your Token is invalid!") tabControl1.Enabled = true;
+            
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -51,6 +53,12 @@ namespace ChannelManager
                 btnSet.Enabled = true;
             else
                 btnSet.Enabled = false;
+        }
+
+        private void btnSendMsg_Click(object sender, EventArgs e)
+        {
+            botAPI.sendMessage(boxMsg.Text);
+            MessageBox.Show("Sent!");
         }
     }
 }

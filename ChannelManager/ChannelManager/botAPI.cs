@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System;using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Net;
@@ -25,10 +24,13 @@ namespace ChannelManager
          /// <summary>
         /// This methoud will take token from user
         /// </summary>
-        /// <param name="token11">Your bot TOEKEN!</param>
-        public static string set(string token11)
+        /// <param name="token11">Your bot Token</param>
+        /// <param name="Username">Your channel username</param>
+        /// <returns>The Bot Name</returns>
+        public static string set(string token11, string Username)
         {
             var doc = "";
+            channelUserName = "?chat_id=@" + Username;
             try
             {
                 HttpWebRequest myHttpWebRequest = (HttpWebRequest)WebRequest.Create(httpReq + token11 + "/getMe");
@@ -61,6 +63,26 @@ namespace ChannelManager
 
 
 
+        /// <summary>
+        /// This methoud will send a Message whith Markdown
+        /// </summary>
+        /// <param name="photo">This is the photo URL</param>
+        /// <param name="message">The caption of the picture</param>
+        public static void sendMessage(string message)
+        {
+            WebRequest req = WebRequest.Create(httpReq + token + "/sendMessage"
+                + channelUserName + "&text=" + message + "&parse_mode=HTML");
+            req.UseDefaultCredentials = true;
+
+            var result = req.GetResponse();
+            StreamReader reader = new StreamReader(result.GetResponseStream());
+            string ans = reader.ReadToEnd();
+            //Console.WriteLine(ans);
+            req.Abort();
+        }
+
+
+
 
         /// <summary>
         /// This methoud will send a picture whith caption
@@ -69,7 +91,7 @@ namespace ChannelManager
         /// <param name="message">The caption of the picture</param>
         public static void sendPhoto(string photo, string message)
         {
-            WebRequest req = WebRequest.Create(httpReq + "/sendPhoto"
+            WebRequest req = WebRequest.Create(httpReq + token + "/sendPhoto"
                 + channelUserName + "&photo=" + photo + "&caption=" + message);
             req.UseDefaultCredentials = true;
 
@@ -84,8 +106,6 @@ namespace ChannelManager
 
 
 
-
-
         /// <summary>
         /// This methoud will send a file whith caption
         /// </summary>
@@ -93,7 +113,7 @@ namespace ChannelManager
         /// <param name="message">The caption of the document</param>
         public static void sendDocument(string document, string message)
         {
-            WebRequest req = WebRequest.Create(httpReq + "/sendDocument"
+            WebRequest req = WebRequest.Create(httpReq + token + "/sendDocument"
                 + channelUserName + "&document=" + document + "&caption=" + message);
             req.UseDefaultCredentials = true;
 
