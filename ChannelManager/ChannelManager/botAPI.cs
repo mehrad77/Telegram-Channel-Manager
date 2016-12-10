@@ -15,7 +15,8 @@ namespace ChannelManager
 
 
         // Defining Base variables
-        public static string token1 = "184349764:AAHiUalPK5DlDj0zA6r236D13QGUtAJAPTs"; // The bot token
+        public static string token = "";
+        //"184349764:AAHiUalPK5DlDj0zA6r236D13QGUtAJAPTs"; // The bot token
         public static string channelUserName = "?chat_id=@MehradTestChannel"; //The channel that bot has been added into it
         public static string httpReq = "https://api.telegram.org/bot";
 
@@ -24,26 +25,27 @@ namespace ChannelManager
          /// <summary>
         /// This methoud will take token from user
         /// </summary>
-        /// <param name="token">Your bot TOEKEN!</param>
-        public static string set(string token)
+        /// <param name="token11">Your bot TOEKEN!</param>
+        public static string set(string token11)
         {
             var doc = "";
             try
             {
-                HttpWebRequest myHttpWebRequest = (HttpWebRequest)WebRequest.Create(httpReq + token + "/getMe");
+                HttpWebRequest myHttpWebRequest = (HttpWebRequest)WebRequest.Create(httpReq + token11 + "/getMe");
                 HttpWebResponse myHttpWebResponse = (HttpWebResponse)myHttpWebRequest.GetResponse();
 
-                if (myHttpWebResponse.StatusCode == HttpStatusCode.OK) { 
+                if (myHttpWebResponse.StatusCode == HttpStatusCode.OK) {
                     WebResponse response = myHttpWebRequest.GetResponse();
                     StreamReader reader = new StreamReader(response.GetResponseStream());
                     doc = reader.ReadToEnd();
+                    token = token11;
                     // ذخیره کردن جی‌سون بازگشتی از تلگرام
                 }
                 myHttpWebResponse.Close();
             }
             catch (WebException e)
             {
-                return "ERROR!! Your Token is invalid!  " + e.Status;
+                return "ERROR!! Your Token is invalid!"; //+ e.Status;
             }
 
 
