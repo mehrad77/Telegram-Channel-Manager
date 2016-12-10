@@ -66,8 +66,8 @@ namespace ChannelManager
         /// <summary>
         /// This methoud will send a Message whith Markdown
         /// </summary>
-        /// <param name="photo">This is the photo URL</param>
-        /// <param name="message">The caption of the picture</param>
+        /// <param name="message">Text of the message to be sent</param>
+        /// <param name="disable_notification">Sends the message silently. iOS users will not receive a notification, Android users will receive a notification with no sound.</param>
         public static void sendMessage(string message, Boolean disable_notification)
         {
             WebRequest req = WebRequest.Create(httpReq + token + "/sendMessage"
@@ -88,11 +88,37 @@ namespace ChannelManager
         /// This methoud will send a picture whith caption
         /// </summary>
         /// <param name="photo">This is the photo URL</param>
-        /// <param name="message">The caption of the picture</param>
+        /// <param name="message">Photo caption, 0-200 characters</param>
+        /// <param name="disable_notification">Sends the message silently. iOS users will not receive a notification, Android users will receive a notification with no sound.</param>
         public static void sendPhoto(string photo, string message, Boolean disable_notification)
         {
             WebRequest req = WebRequest.Create(httpReq + token + "/sendPhoto"
                 + channelUserName + "&photo=" + photo + "&caption=" + message + "&disable_notification=" + disable_notification);
+            req.UseDefaultCredentials = true;
+
+            var result = req.GetResponse();
+            StreamReader reader = new StreamReader(result.GetResponseStream());
+            string ans = reader.ReadToEnd();
+            //Console.WriteLine(ans);
+            req.Abort();
+        }
+
+
+
+
+        /// <summary>
+        /// This methoud will send a Audio whith caption
+        /// </summary>
+        /// <param name="audio">This is the photo URL</param>
+        /// <param name="message">Audio caption, 0-200 characters</param>
+        /// <param name="disable_notification">Sends the message silently. iOS users will not receive a notification, Android users will receive a notification with no sound.</param>
+        /// <param name="duration">Duration of the audio in seconds</param>
+        /// <param name="performer">The audio performer, Artist</param>
+        /// <param name="title">The track name</param>
+        public static void sendAudio(string audio, string message, Boolean disable_notification, int duration, string performer, string title)
+        {
+            WebRequest req = WebRequest.Create(httpReq + token + "/sendAudio"
+                + channelUserName + "&audio=" + audio + "&caption=" + message + "&disable_notification=" + disable_notification + "&duration=" + duration + "&performer=" + performer + "&title=" + title);
             req.UseDefaultCredentials = true;
 
             var result = req.GetResponse();

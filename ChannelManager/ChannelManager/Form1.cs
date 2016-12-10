@@ -24,8 +24,8 @@ namespace ChannelManager
             System.IO.File.WriteAllText("token.txt", boxToken.Text);
             System.IO.File.WriteAllText("user.txt", boxUser.Text);
             if (txtBotName.Text != "ERROR!! Your Token is invalid!") tabControl1.Enabled = true;
-            
         }
+
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -65,7 +65,6 @@ namespace ChannelManager
         //---------------------------------------------------
         private void btnSendMsg_Click(object sender, EventArgs e)
         {
-            
             botAPI.sendMessage(boxMsg.Text,chkSilence.Checked);
             MessageBox.Show("Sent!");
         }
@@ -79,6 +78,14 @@ namespace ChannelManager
             botAPI.sendPhoto(boxPictureURL.Text, boxCaption.Text, chkSilence2.Checked);
             MessageBox.Show("Sent!");
         }
+
+        private void btnSendAudio_Click(object sender, EventArgs e)
+        {
+            botAPI.sendAudio(boxAudioURL.Text, boxAudioCaption.Text, chkSilence3.Checked, int.Parse(boxDuration.Text), boxArtist.Text, boxTitle.Text);
+            MessageBox.Show("Sent!");
+        }
+
+       
         //---------------------------------------------------
 
 
