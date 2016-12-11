@@ -74,6 +74,30 @@ namespace ChannelManager
         {
             MessageBox.Show(botAPI.sendDocument(boxFileURL.Text, boxFileURL.Text, chkSilence4.Checked));
         }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            /**MessageBox.Show(
+                "Hello World!",
+                "About Developer",
+                MessageBoxButtons.OKCancel,
+                MessageBoxIcon.Information,
+                MessageBoxDefaultButton.Button1
+                );**/
+            About AboutForm = new About();
+            AboutForm.Show();
+        }
+
+        private void aboutTelegramCMToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AboutThis AboutThisForm = new AboutThis();
+            AboutThisForm.Show();
+        }
+        private void helpToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            help help = new help();
+            help.Show();
+        }
         //---------------------------------------------------
 
 
