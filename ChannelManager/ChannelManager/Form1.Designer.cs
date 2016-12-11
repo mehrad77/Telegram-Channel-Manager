@@ -68,6 +68,17 @@
             this.chkSilence3 = new System.Windows.Forms.CheckBox();
             this.btnSendAudio = new System.Windows.Forms.Button();
             this.boxAudioCaption = new System.Windows.Forms.TextBox();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.radioButton5 = new System.Windows.Forms.RadioButton();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.boxFileURL = new System.Windows.Forms.TextBox();
+            this.radioButton6 = new System.Windows.Forms.RadioButton();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.chkSilence4 = new System.Windows.Forms.CheckBox();
+            this.btnSendFile = new System.Windows.Forms.Button();
+            this.boxFileCaption = new System.Windows.Forms.TextBox();
             this.txtBotName = new System.Windows.Forms.Label();
             this.boxUser = new System.Windows.Forms.TextBox();
             this.txtChannelUser = new System.Windows.Forms.Label();
@@ -98,6 +109,9 @@
             this.groupBox5.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            this.tabPage4.SuspendLayout();
+            this.groupBox7.SuspendLayout();
+            this.groupBox8.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -134,6 +148,7 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Enabled = false;
             this.tabControl1.Location = new System.Drawing.Point(0, 89);
             this.tabControl1.Name = "tabControl1";
@@ -158,7 +173,7 @@
             // chkSilence
             // 
             this.chkSilence.AutoSize = true;
-            this.chkSilence.Location = new System.Drawing.Point(10, 259);
+            this.chkSilence.Location = new System.Drawing.Point(12, 258);
             this.chkSilence.Name = "chkSilence";
             this.chkSilence.Size = new System.Drawing.Size(156, 17);
             this.chkSilence.TabIndex = 9;
@@ -167,7 +182,7 @@
             // 
             // msgHint
             // 
-            this.msgHint.Location = new System.Drawing.Point(557, 7);
+            this.msgHint.Location = new System.Drawing.Point(559, 6);
             this.msgHint.Name = "msgHint";
             this.msgHint.ReadOnly = true;
             this.msgHint.Size = new System.Drawing.Size(207, 246);
@@ -178,7 +193,7 @@
             // 
             // btnSendMsg
             // 
-            this.btnSendMsg.Location = new System.Drawing.Point(637, 261);
+            this.btnSendMsg.Location = new System.Drawing.Point(639, 260);
             this.btnSendMsg.Name = "btnSendMsg";
             this.btnSendMsg.Size = new System.Drawing.Size(129, 49);
             this.btnSendMsg.TabIndex = 7;
@@ -188,7 +203,7 @@
             // 
             // boxMsg
             // 
-            this.boxMsg.Location = new System.Drawing.Point(7, 7);
+            this.boxMsg.Location = new System.Drawing.Point(9, 6);
             this.boxMsg.Multiline = true;
             this.boxMsg.Name = "boxMsg";
             this.boxMsg.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -217,7 +232,7 @@
             // 
             this.radioButton2.AutoSize = true;
             this.radioButton2.Enabled = false;
-            this.radioButton2.Location = new System.Drawing.Point(556, 8);
+            this.radioButton2.Location = new System.Drawing.Point(555, 8);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(158, 17);
             this.radioButton2.TabIndex = 18;
@@ -228,7 +243,7 @@
             // 
             this.radioButton1.AutoSize = true;
             this.radioButton1.Checked = true;
-            this.radioButton1.Location = new System.Drawing.Point(10, 6);
+            this.radioButton1.Location = new System.Drawing.Point(9, 6);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(127, 17);
             this.radioButton1.TabIndex = 15;
@@ -242,7 +257,7 @@
             this.groupBox2.Controls.Add(this.button2);
             this.groupBox2.Controls.Add(this.pictureBox1);
             this.groupBox2.Enabled = false;
-            this.groupBox2.Location = new System.Drawing.Point(556, 29);
+            this.groupBox2.Location = new System.Drawing.Point(555, 29);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(204, 223);
             this.groupBox2.TabIndex = 17;
@@ -278,7 +293,7 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.boxPictureURL);
-            this.groupBox1.Location = new System.Drawing.Point(10, 29);
+            this.groupBox1.Location = new System.Drawing.Point(9, 29);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(540, 56);
             this.groupBox1.TabIndex = 16;
@@ -296,7 +311,7 @@
             // chkSilence2
             // 
             this.chkSilence2.AutoSize = true;
-            this.chkSilence2.Location = new System.Drawing.Point(10, 258);
+            this.chkSilence2.Location = new System.Drawing.Point(9, 258);
             this.chkSilence2.Name = "chkSilence2";
             this.chkSilence2.Size = new System.Drawing.Size(156, 17);
             this.chkSilence2.TabIndex = 13;
@@ -305,7 +320,7 @@
             // 
             // btnSendPicture
             // 
-            this.btnSendPicture.Location = new System.Drawing.Point(637, 261);
+            this.btnSendPicture.Location = new System.Drawing.Point(636, 261);
             this.btnSendPicture.Name = "btnSendPicture";
             this.btnSendPicture.Size = new System.Drawing.Size(129, 49);
             this.btnSendPicture.TabIndex = 11;
@@ -315,7 +330,7 @@
             // 
             // boxCaption
             // 
-            this.boxCaption.Location = new System.Drawing.Point(10, 91);
+            this.boxCaption.Location = new System.Drawing.Point(9, 91);
             this.boxCaption.Multiline = true;
             this.boxCaption.Name = "boxCaption";
             this.boxCaption.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -466,14 +481,14 @@
             this.textBox3.Enabled = false;
             this.textBox3.Location = new System.Drawing.Point(6, 20);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(127, 20);
+            this.textBox3.Size = new System.Drawing.Size(187, 20);
             this.textBox3.TabIndex = 2;
             this.textBox3.Text = "...";
             // 
             // button1
             // 
             this.button1.Enabled = false;
-            this.button1.Location = new System.Drawing.Point(141, 19);
+            this.button1.Location = new System.Drawing.Point(199, 18);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(57, 23);
             this.button1.TabIndex = 1;
@@ -509,6 +524,125 @@
             this.boxAudioCaption.Size = new System.Drawing.Size(482, 162);
             this.boxAudioCaption.TabIndex = 19;
             this.boxAudioCaption.Text = "Audio Caption...";
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.Controls.Add(this.radioButton5);
+            this.tabPage4.Controls.Add(this.groupBox7);
+            this.tabPage4.Controls.Add(this.radioButton6);
+            this.tabPage4.Controls.Add(this.groupBox8);
+            this.tabPage4.Controls.Add(this.chkSilence4);
+            this.tabPage4.Controls.Add(this.btnSendFile);
+            this.tabPage4.Controls.Add(this.boxFileCaption);
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(769, 314);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Send File";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // radioButton5
+            // 
+            this.radioButton5.AutoSize = true;
+            this.radioButton5.Checked = true;
+            this.radioButton5.Location = new System.Drawing.Point(9, 6);
+            this.radioButton5.Name = "radioButton5";
+            this.radioButton5.Size = new System.Drawing.Size(322, 17);
+            this.radioButton5.TabIndex = 30;
+            this.radioButton5.TabStop = true;
+            this.radioButton5.Text = "Add \"Zip\" or \"PDF\" file from URL  (It does not work sometimes)";
+            this.radioButton5.UseVisualStyleBackColor = true;
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.boxFileURL);
+            this.groupBox7.Location = new System.Drawing.Point(9, 29);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(482, 56);
+            this.groupBox7.TabIndex = 31;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "File URL";
+            // 
+            // boxFileURL
+            // 
+            this.boxFileURL.Location = new System.Drawing.Point(7, 20);
+            this.boxFileURL.Name = "boxFileURL";
+            this.boxFileURL.Size = new System.Drawing.Size(469, 20);
+            this.boxFileURL.TabIndex = 0;
+            this.boxFileURL.Text = "https://example.prg/sample.zip";
+            // 
+            // radioButton6
+            // 
+            this.radioButton6.AutoSize = true;
+            this.radioButton6.Enabled = false;
+            this.radioButton6.Location = new System.Drawing.Point(497, 6);
+            this.radioButton6.Name = "radioButton6";
+            this.radioButton6.Size = new System.Drawing.Size(168, 17);
+            this.radioButton6.TabIndex = 33;
+            this.radioButton6.Text = "Upload \"any file\" from your PC";
+            this.radioButton6.UseVisualStyleBackColor = true;
+            // 
+            // groupBox8
+            // 
+            this.groupBox8.Controls.Add(this.textBox7);
+            this.groupBox8.Controls.Add(this.button3);
+            this.groupBox8.Enabled = false;
+            this.groupBox8.Location = new System.Drawing.Point(497, 29);
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.Size = new System.Drawing.Size(262, 56);
+            this.groupBox8.TabIndex = 32;
+            this.groupBox8.TabStop = false;
+            this.groupBox8.Text = "Upload File";
+            // 
+            // textBox7
+            // 
+            this.textBox7.Enabled = false;
+            this.textBox7.Location = new System.Drawing.Point(6, 20);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(187, 20);
+            this.textBox7.TabIndex = 2;
+            this.textBox7.Text = "...";
+            // 
+            // button3
+            // 
+            this.button3.Enabled = false;
+            this.button3.Location = new System.Drawing.Point(199, 18);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(57, 23);
+            this.button3.TabIndex = 1;
+            this.button3.Text = "Choose";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // chkSilence4
+            // 
+            this.chkSilence4.AutoSize = true;
+            this.chkSilence4.Location = new System.Drawing.Point(9, 258);
+            this.chkSilence4.Name = "chkSilence4";
+            this.chkSilence4.Size = new System.Drawing.Size(156, 17);
+            this.chkSilence4.TabIndex = 29;
+            this.chkSilence4.Text = "Sends the message silently.";
+            this.chkSilence4.UseVisualStyleBackColor = true;
+            // 
+            // btnSendFile
+            // 
+            this.btnSendFile.Location = new System.Drawing.Point(637, 261);
+            this.btnSendFile.Name = "btnSendFile";
+            this.btnSendFile.Size = new System.Drawing.Size(129, 49);
+            this.btnSendFile.TabIndex = 28;
+            this.btnSendFile.Text = "Send!";
+            this.btnSendFile.UseVisualStyleBackColor = true;
+            this.btnSendFile.Click += new System.EventHandler(this.btnSendFile_Click);
+            // 
+            // boxFileCaption
+            // 
+            this.boxFileCaption.Location = new System.Drawing.Point(9, 91);
+            this.boxFileCaption.Multiline = true;
+            this.boxFileCaption.Name = "boxFileCaption";
+            this.boxFileCaption.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.boxFileCaption.Size = new System.Drawing.Size(482, 162);
+            this.boxFileCaption.TabIndex = 27;
+            this.boxFileCaption.Text = "File Caption...";
             // 
             // txtBotName
             // 
@@ -705,6 +839,12 @@
             this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            this.tabPage4.ResumeLayout(false);
+            this.tabPage4.PerformLayout();
+            this.groupBox7.ResumeLayout(false);
+            this.groupBox7.PerformLayout();
+            this.groupBox8.ResumeLayout(false);
+            this.groupBox8.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -773,6 +913,17 @@
         private System.Windows.Forms.ToolStripMenuItem contentsToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
+        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.RadioButton radioButton5;
+        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.TextBox boxFileURL;
+        private System.Windows.Forms.RadioButton radioButton6;
+        private System.Windows.Forms.GroupBox groupBox8;
+        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.CheckBox chkSilence4;
+        private System.Windows.Forms.Button btnSendFile;
+        private System.Windows.Forms.TextBox boxFileCaption;
     }
 }
 

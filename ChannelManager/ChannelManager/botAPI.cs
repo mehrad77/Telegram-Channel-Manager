@@ -54,8 +54,6 @@ namespace ChannelManager
             dynamic ans = JsonConvert.DeserializeObject(doc);
             string id = ans.id;
             string first_name = ans.result.first_name;
-
-
             return first_name;
         }
 
@@ -68,17 +66,34 @@ namespace ChannelManager
         /// </summary>
         /// <param name="message">Text of the message to be sent</param>
         /// <param name="disable_notification">Sends the message silently. iOS users will not receive a notification, Android users will receive a notification with no sound.</param>
-        public static void sendMessage(string message, Boolean disable_notification)
+        public static string sendMessage(string message, Boolean disable_notification)
         {
-            WebRequest req = WebRequest.Create(httpReq + token + "/sendMessage"
+            string doc = "";
+            try
+            {
+                HttpWebRequest myHttpWebRequest = (HttpWebRequest)WebRequest.Create(httpReq + token + "/sendMessage"
                 + channelUserName + "&text=" + message + "&parse_mode=HTML" + "&disable_notification=" + disable_notification);
-            req.UseDefaultCredentials = true;
+                HttpWebResponse myHttpWebResponse = (HttpWebResponse)myHttpWebRequest.GetResponse();
 
-            var result = req.GetResponse();
-            StreamReader reader = new StreamReader(result.GetResponseStream());
-            string ans = reader.ReadToEnd();
-            //Console.WriteLine(ans);
-            req.Abort();
+                if (myHttpWebResponse.StatusCode == HttpStatusCode.OK)
+                {
+                    WebResponse response = myHttpWebRequest.GetResponse();
+                    StreamReader reader = new StreamReader(response.GetResponseStream());
+                    doc = reader.ReadToEnd();
+                    // ذخیره کردن جی‌سون بازگشتی از تلگرام
+                }
+                myHttpWebResponse.Close();
+            }
+            catch (WebException e)
+            {
+                return "ERROR!! " + e.Message + "\r\n" + doc; //+ e.Status;
+            }
+
+
+            dynamic ans = JsonConvert.DeserializeObject(doc);
+            //string id = ans.id;
+            //string first_name = ans.result.first_name;
+            return doc;
         }
 
 
@@ -90,17 +105,34 @@ namespace ChannelManager
         /// <param name="photo">This is the photo URL</param>
         /// <param name="message">Photo caption, 0-200 characters</param>
         /// <param name="disable_notification">Sends the message silently. iOS users will not receive a notification, Android users will receive a notification with no sound.</param>
-        public static void sendPhoto(string photo, string message, Boolean disable_notification)
+        public static string sendPhoto(string photo, string message, Boolean disable_notification)
         {
-            WebRequest req = WebRequest.Create(httpReq + token + "/sendPhoto"
+            string doc = "";
+            try
+            {
+                HttpWebRequest myHttpWebRequest = (HttpWebRequest)WebRequest.Create(httpReq + token + "/sendPhoto"
                 + channelUserName + "&photo=" + photo + "&caption=" + message + "&disable_notification=" + disable_notification);
-            req.UseDefaultCredentials = true;
+                HttpWebResponse myHttpWebResponse = (HttpWebResponse)myHttpWebRequest.GetResponse();
 
-            var result = req.GetResponse();
-            StreamReader reader = new StreamReader(result.GetResponseStream());
-            string ans = reader.ReadToEnd();
-            //Console.WriteLine(ans);
-            req.Abort();
+                if (myHttpWebResponse.StatusCode == HttpStatusCode.OK)
+                {
+                    WebResponse response = myHttpWebRequest.GetResponse();
+                    StreamReader reader = new StreamReader(response.GetResponseStream());
+                    doc = reader.ReadToEnd();
+                    // ذخیره کردن جی‌سون بازگشتی از تلگرام
+                }
+                myHttpWebResponse.Close();
+            }
+            catch (WebException e)
+            {
+                return "ERROR!! " + e.Message + "\r\n" + doc; //+ e.Status;
+            }
+
+
+            dynamic ans = JsonConvert.DeserializeObject(doc);
+            //string id = ans.id;
+            //string first_name = ans.result.first_name;
+            return doc;
         }
 
 
@@ -109,7 +141,7 @@ namespace ChannelManager
         /// <summary>
         /// This methoud will send a Audio whith caption
         /// </summary>
-        /// <param name="audio">This is the photo URL</param>
+        /// <param name="audio">This is the audio URL</param>
         /// <param name="message">Audio caption, 0-200 characters</param>
         /// <param name="disable_notification">Sends the message silently. iOS users will not receive a notification, Android users will receive a notification with no sound.</param>
         /// <param name="duration">Duration of the audio in seconds</param>
@@ -135,19 +167,14 @@ namespace ChannelManager
             }
             catch (WebException e)
             {
-                return "ERROR!! " + e.Message; //+ e.Status;
+                return "ERROR!! " + e.Message + "\r\n" + doc; //+ e.Status;
             }
 
 
             dynamic ans = JsonConvert.DeserializeObject(doc);
             //string id = ans.id;
             //string first_name = ans.result.first_name;
-
-
             return doc;
-
-
-
         }
 
 
@@ -155,17 +182,39 @@ namespace ChannelManager
 
 
         /// <summary>
-        /// This methoud will send a file whith caption
+        /// This methoud will send a File (Just .Zip and .PDF in URL mode) whith caption
         /// </summary>
         /// <param name="document">This is the document URL</param>
-        /// <param name="message">The caption of the document</param>
-        public static void sendDocument(string document, string message)
+        /// <param name="message">Document caption, 0-200 characters</param>
+        /// <param name="disable_notification">Sends the message silently. iOS users will not receive a notification, Android users will receive a notification with no sound.</param>
+        public static string sendDocument(string document, string message, Boolean disable_notification)
         {
-            WebRequest req = WebRequest.Create(httpReq + token + "/sendDocument"
-                + channelUserName + "&document=" + document + "&caption=" + message);
-            req.UseDefaultCredentials = true;
+            string doc = "";
+            try
+            {
+                HttpWebRequest myHttpWebRequest = (HttpWebRequest)WebRequest.Create(httpReq + token + "/sendDocument"
+                + channelUserName + "&document=" + document + "&caption=" + message + "&disable_notification=" + disable_notification);
+                HttpWebResponse myHttpWebResponse = (HttpWebResponse)myHttpWebRequest.GetResponse();
 
-            req.Abort();
+                if (myHttpWebResponse.StatusCode == HttpStatusCode.OK)
+                {
+                    WebResponse response = myHttpWebRequest.GetResponse();
+                    StreamReader reader = new StreamReader(response.GetResponseStream());
+                    doc = reader.ReadToEnd();
+                    // ذخیره کردن جی‌سون بازگشتی از تلگرام
+                }
+                myHttpWebResponse.Close();
+            }
+            catch (WebException e)
+            {
+                return "ERROR!! " + e.Message + "\r\n" + doc; //+ e.Status;
+            }
+
+
+            dynamic ans = JsonConvert.DeserializeObject(doc);
+            //string id = ans.id;
+            //string first_name = ans.result.first_name;
+            return doc;
         }
 
 

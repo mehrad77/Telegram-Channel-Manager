@@ -55,37 +55,25 @@ namespace ChannelManager
                 btnSet.Enabled = false;
         }
 
-
-
-
-
-
-
-
         //---------------------------------------------------
         private void btnSendMsg_Click(object sender, EventArgs e)
         {
-            botAPI.sendMessage(boxMsg.Text,chkSilence.Checked);
-            MessageBox.Show("Sent!");
+            MessageBox.Show(botAPI.sendMessage(boxMsg.Text,chkSilence.Checked));
         }
-        //---------------------------------------------------
-
-
-
         //---------------------------------------------------
         private void btnSendPicture_Click(object sender, EventArgs e)
         {
-            botAPI.sendPhoto(boxPictureURL.Text, boxCaption.Text, chkSilence2.Checked);
-            MessageBox.Show("Sent!");
+            MessageBox.Show(botAPI.sendPhoto(boxPictureURL.Text, boxCaption.Text, chkSilence2.Checked));
         }
-
+        //---------------------------------------------------
         private void btnSendAudio_Click(object sender, EventArgs e)
         {
             MessageBox.Show(botAPI.sendAudio(boxAudioURL.Text, boxAudioCaption.Text, chkSilence3.Checked, boxArtist.Text, boxTitle.Text));
-            MessageBox.Show("Sent!");
         }
-
-       
+        private void btnSendFile_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(botAPI.sendDocument(boxFileURL.Text, boxFileURL.Text, chkSilence4.Checked));
+        }
         //---------------------------------------------------
 
 
