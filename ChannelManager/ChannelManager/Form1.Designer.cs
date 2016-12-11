@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.btnSet = new System.Windows.Forms.Button();
             this.boxToken = new System.Windows.Forms.TextBox();
@@ -89,7 +88,6 @@
             this.contentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -351,6 +349,7 @@
             this.groupBox5.Controls.Add(this.boxArtist);
             this.groupBox5.Controls.Add(this.label2);
             this.groupBox5.Controls.Add(this.boxDuration);
+            this.groupBox5.Enabled = false;
             this.groupBox5.Location = new System.Drawing.Point(503, 91);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(256, 164);
@@ -774,7 +773,6 @@
         private System.Windows.Forms.ToolStripMenuItem contentsToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
-        private System.Windows.Forms.Timer timer1;
     }
 }
 

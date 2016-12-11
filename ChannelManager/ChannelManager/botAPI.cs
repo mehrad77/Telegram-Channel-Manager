@@ -115,17 +115,39 @@ namespace ChannelManager
         /// <param name="duration">Duration of the audio in seconds</param>
         /// <param name="performer">The audio performer, Artist</param>
         /// <param name="title">The track name</param>
-        public static void sendAudio(string audio, string message, Boolean disable_notification, int duration, string performer, string title)
+        public static string sendAudio(string audio, string message, Boolean disable_notification, string performer, string title)
         {
-            WebRequest req = WebRequest.Create(httpReq + token + "/sendAudio"
-                + channelUserName + "&audio=" + audio + "&caption=" + message + "&disable_notification=" + disable_notification + "&duration=" + duration + "&performer=" + performer + "&title=" + title);
-            req.UseDefaultCredentials = true;
+            string doc = "";
+            try
+            {
+                HttpWebRequest myHttpWebRequest = (HttpWebRequest)WebRequest.Create(httpReq + token + "/sendAudio"
+                + channelUserName + "&audio=" + audio + "&caption=" + message + "&disable_notification=" + disable_notification + "&performer=" + performer + "&title=" + title);
+                HttpWebResponse myHttpWebResponse = (HttpWebResponse)myHttpWebRequest.GetResponse();
 
-            var result = req.GetResponse();
-            StreamReader reader = new StreamReader(result.GetResponseStream());
-            string ans = reader.ReadToEnd();
-            //Console.WriteLine(ans);
-            req.Abort();
+                if (myHttpWebResponse.StatusCode == HttpStatusCode.OK)
+                {
+                    WebResponse response = myHttpWebRequest.GetResponse();
+                    StreamReader reader = new StreamReader(response.GetResponseStream());
+                    doc = reader.ReadToEnd();
+                    // ذخیره کردن جی‌سون بازگشتی از تلگرام
+                }
+                myHttpWebResponse.Close();
+            }
+            catch (WebException e)
+            {
+                return "ERROR!! " + e.Message; //+ e.Status;
+            }
+
+
+            dynamic ans = JsonConvert.DeserializeObject(doc);
+            //string id = ans.id;
+            //string first_name = ans.result.first_name;
+
+
+            return doc;
+
+
+
         }
 
 

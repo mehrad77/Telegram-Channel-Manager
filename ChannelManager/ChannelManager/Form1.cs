@@ -81,7 +81,7 @@ namespace ChannelManager
 
         private void btnSendAudio_Click(object sender, EventArgs e)
         {
-            botAPI.sendAudio(boxAudioURL.Text, boxAudioCaption.Text, chkSilence3.Checked, int.Parse(boxDuration.Text), boxArtist.Text, boxTitle.Text);
+            MessageBox.Show(botAPI.sendAudio(boxAudioURL.Text, boxAudioCaption.Text, chkSilence3.Checked, boxArtist.Text, boxTitle.Text));
             MessageBox.Show("Sent!");
         }
 
