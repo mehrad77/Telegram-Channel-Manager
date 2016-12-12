@@ -143,7 +143,9 @@ with HTML tags.
 You can find a tutorial in Help menu.
 
 I would be grateful if you help me in developing this program. You can
-do that in Project Github</value>
+do that in Project Github
+
+License: GPL3</value>
   </data>
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

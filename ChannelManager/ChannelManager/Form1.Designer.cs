@@ -79,7 +79,20 @@
             this.chkSilence4 = new System.Windows.Forms.CheckBox();
             this.btnSendFile = new System.Windows.Forms.Button();
             this.boxFileCaption = new System.Windows.Forms.TextBox();
-            this.txtBotName = new System.Windows.Forms.Label();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.btnUnZoom = new System.Windows.Forms.Button();
+            this.btnZoom = new System.Windows.Forms.Button();
+            this.gmap = new GMap.NET.WindowsForms.GMapControl();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.OpenStreetMap = new System.Windows.Forms.RadioButton();
+            this.GoogleSatellite = new System.Windows.Forms.RadioButton();
+            this.GoogleMap = new System.Windows.Forms.RadioButton();
+            this.label5 = new System.Windows.Forms.Label();
+            this.chkSilence5 = new System.Windows.Forms.CheckBox();
+            this.boxLatitude = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.boxLongitude = new System.Windows.Forms.TextBox();
+            this.btnSendLocation = new System.Windows.Forms.Button();
             this.boxUser = new System.Windows.Forms.TextBox();
             this.txtChannelUser = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -96,11 +109,17 @@
             this.customizeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
-            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.helpToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutTelegramCMToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.helpToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.txtChannelName = new System.Windows.Forms.LinkLabel();
+            this.txtBotName = new System.Windows.Forms.LinkLabel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.boxName = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.boxAddress = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -114,6 +133,8 @@
             this.tabPage4.SuspendLayout();
             this.groupBox7.SuspendLayout();
             this.groupBox8.SuspendLayout();
+            this.tabPage5.SuspendLayout();
+            this.groupBox6.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -151,6 +172,7 @@
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
+            this.tabControl1.Controls.Add(this.tabPage5);
             this.tabControl1.Enabled = false;
             this.tabControl1.Location = new System.Drawing.Point(0, 89);
             this.tabControl1.Name = "tabControl1";
@@ -646,18 +668,174 @@
             this.boxFileCaption.TabIndex = 27;
             this.boxFileCaption.Text = "File Caption...";
             // 
-            // txtBotName
+            // tabPage5
             // 
-            this.txtBotName.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtBotName.AutoSize = true;
-            this.txtBotName.Location = new System.Drawing.Point(584, 44);
-            this.txtBotName.Name = "txtBotName";
-            this.txtBotName.Size = new System.Drawing.Size(37, 13);
-            this.txtBotName.TabIndex = 4;
-            this.txtBotName.Text = "Status";
-            this.txtBotName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.tabPage5.Controls.Add(this.btnUnZoom);
+            this.tabPage5.Controls.Add(this.btnZoom);
+            this.tabPage5.Controls.Add(this.gmap);
+            this.tabPage5.Controls.Add(this.groupBox6);
+            this.tabPage5.Controls.Add(this.btnSendLocation);
+            this.tabPage5.Location = new System.Drawing.Point(4, 22);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage5.Size = new System.Drawing.Size(769, 314);
+            this.tabPage5.TabIndex = 4;
+            this.tabPage5.Text = "Send Location";
+            this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // btnUnZoom
+            // 
+            this.btnUnZoom.Location = new System.Drawing.Point(9, 44);
+            this.btnUnZoom.Name = "btnUnZoom";
+            this.btnUnZoom.Size = new System.Drawing.Size(25, 25);
+            this.btnUnZoom.TabIndex = 32;
+            this.btnUnZoom.Text = "-";
+            this.btnUnZoom.UseVisualStyleBackColor = true;
+            this.btnUnZoom.Click += new System.EventHandler(this.btnUnZoom_Click);
+            // 
+            // btnZoom
+            // 
+            this.btnZoom.Location = new System.Drawing.Point(9, 7);
+            this.btnZoom.Name = "btnZoom";
+            this.btnZoom.Size = new System.Drawing.Size(25, 25);
+            this.btnZoom.TabIndex = 31;
+            this.btnZoom.Text = "+";
+            this.btnZoom.UseVisualStyleBackColor = true;
+            this.btnZoom.Click += new System.EventHandler(this.btnZoom_Click);
+            // 
+            // gmap
+            // 
+            this.gmap.Bearing = 0F;
+            this.gmap.CanDragMap = true;
+            this.gmap.EmptyTileColor = System.Drawing.Color.Navy;
+            this.gmap.GrayScaleMode = false;
+            this.gmap.HelperLineOption = GMap.NET.WindowsForms.HelperLineOptions.DontShow;
+            this.gmap.LevelsKeepInMemmory = 5;
+            this.gmap.Location = new System.Drawing.Point(9, 7);
+            this.gmap.MarkersEnabled = true;
+            this.gmap.MaxZoom = 18;
+            this.gmap.MinZoom = 4;
+            this.gmap.MouseWheelZoomType = GMap.NET.MouseWheelZoomType.MousePositionAndCenter;
+            this.gmap.Name = "gmap";
+            this.gmap.NegativeMode = false;
+            this.gmap.PolygonsEnabled = true;
+            this.gmap.RetryLoadTile = 0;
+            this.gmap.RoutesEnabled = true;
+            this.gmap.ScaleMode = GMap.NET.WindowsForms.ScaleModes.Integer;
+            this.gmap.SelectedAreaFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(65)))), ((int)(((byte)(105)))), ((int)(((byte)(225)))));
+            this.gmap.ShowTileGridLines = false;
+            this.gmap.Size = new System.Drawing.Size(492, 301);
+            this.gmap.TabIndex = 30;
+            this.gmap.Zoom = 5D;
+            this.gmap.Click += new System.EventHandler(this.gmap_Click);
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.label7);
+            this.groupBox6.Controls.Add(this.boxName);
+            this.groupBox6.Controls.Add(this.label8);
+            this.groupBox6.Controls.Add(this.boxAddress);
+            this.groupBox6.Controls.Add(this.OpenStreetMap);
+            this.groupBox6.Controls.Add(this.GoogleSatellite);
+            this.groupBox6.Controls.Add(this.GoogleMap);
+            this.groupBox6.Controls.Add(this.label5);
+            this.groupBox6.Controls.Add(this.chkSilence5);
+            this.groupBox6.Controls.Add(this.boxLatitude);
+            this.groupBox6.Controls.Add(this.label6);
+            this.groupBox6.Controls.Add(this.boxLongitude);
+            this.groupBox6.Location = new System.Drawing.Point(507, 6);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(256, 250);
+            this.groupBox6.TabIndex = 29;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Parameters";
+            // 
+            // OpenStreetMap
+            // 
+            this.OpenStreetMap.AutoSize = true;
+            this.OpenStreetMap.Location = new System.Drawing.Point(9, 42);
+            this.OpenStreetMap.Name = "OpenStreetMap";
+            this.OpenStreetMap.Size = new System.Drawing.Size(100, 17);
+            this.OpenStreetMap.TabIndex = 32;
+            this.OpenStreetMap.Text = "OpenStreetMap";
+            this.OpenStreetMap.UseVisualStyleBackColor = true;
+            this.OpenStreetMap.CheckedChanged += new System.EventHandler(this.OpenStreetMap_CheckedChanged);
+            // 
+            // GoogleSatellite
+            // 
+            this.GoogleSatellite.AutoSize = true;
+            this.GoogleSatellite.Location = new System.Drawing.Point(9, 65);
+            this.GoogleSatellite.Name = "GoogleSatellite";
+            this.GoogleSatellite.Size = new System.Drawing.Size(86, 17);
+            this.GoogleSatellite.TabIndex = 31;
+            this.GoogleSatellite.Text = "Bing Satellite";
+            this.GoogleSatellite.UseVisualStyleBackColor = true;
+            this.GoogleSatellite.CheckedChanged += new System.EventHandler(this.GoogleSatellite_CheckedChanged);
+            // 
+            // GoogleMap
+            // 
+            this.GoogleMap.AutoSize = true;
+            this.GoogleMap.Checked = true;
+            this.GoogleMap.Location = new System.Drawing.Point(9, 19);
+            this.GoogleMap.Name = "GoogleMap";
+            this.GoogleMap.Size = new System.Drawing.Size(83, 17);
+            this.GoogleMap.TabIndex = 30;
+            this.GoogleMap.TabStop = true;
+            this.GoogleMap.Text = "Google Map";
+            this.GoogleMap.UseVisualStyleBackColor = true;
+            this.GoogleMap.CheckedChanged += new System.EventHandler(this.GoogleMap_CheckedChanged);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(6, 93);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(48, 13);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "Latitude:";
+            // 
+            // chkSilence5
+            // 
+            this.chkSilence5.AutoSize = true;
+            this.chkSilence5.Location = new System.Drawing.Point(9, 216);
+            this.chkSilence5.Name = "chkSilence5";
+            this.chkSilence5.Size = new System.Drawing.Size(156, 17);
+            this.chkSilence5.TabIndex = 28;
+            this.chkSilence5.Text = "Sends the message silently.";
+            this.chkSilence5.UseVisualStyleBackColor = true;
+            // 
+            // boxLatitude
+            // 
+            this.boxLatitude.Location = new System.Drawing.Point(71, 90);
+            this.boxLatitude.Name = "boxLatitude";
+            this.boxLatitude.Size = new System.Drawing.Size(179, 20);
+            this.boxLatitude.TabIndex = 6;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(6, 119);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(57, 13);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "Longitude:";
+            // 
+            // boxLongitude
+            // 
+            this.boxLongitude.Location = new System.Drawing.Point(71, 116);
+            this.boxLongitude.Name = "boxLongitude";
+            this.boxLongitude.Size = new System.Drawing.Size(179, 20);
+            this.boxLongitude.TabIndex = 4;
+            // 
+            // btnSendLocation
+            // 
+            this.btnSendLocation.Location = new System.Drawing.Point(637, 262);
+            this.btnSendLocation.Name = "btnSendLocation";
+            this.btnSendLocation.Size = new System.Drawing.Size(129, 49);
+            this.btnSendLocation.TabIndex = 27;
+            this.btnSendLocation.Text = "Send!";
+            this.btnSendLocation.UseVisualStyleBackColor = true;
+            this.btnSendLocation.Click += new System.EventHandler(this.btnSendLocation_Click);
             // 
             // boxUser
             // 
@@ -791,17 +969,6 @@
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.helpToolStripMenuItem.Text = "&Help";
             // 
-            // contentsToolStripMenuItem
-            // 
-            this.contentsToolStripMenuItem.Name = "contentsToolStripMenuItem";
-            this.contentsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.contentsToolStripMenuItem.Text = "&Contents";
-            // 
-            // toolStripSeparator5
-            // 
-            this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(149, 6);
-            // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
@@ -809,12 +976,16 @@
             this.aboutToolStripMenuItem.Text = "&About Developer";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
-            // helpToolStripMenuItem1
+            // contentsToolStripMenuItem
             // 
-            this.helpToolStripMenuItem1.Name = "helpToolStripMenuItem1";
-            this.helpToolStripMenuItem1.Size = new System.Drawing.Size(163, 22);
-            this.helpToolStripMenuItem1.Text = "&Help";
-            this.helpToolStripMenuItem1.Click += new System.EventHandler(this.helpToolStripMenuItem1_Click);
+            this.contentsToolStripMenuItem.Name = "contentsToolStripMenuItem";
+            this.contentsToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.contentsToolStripMenuItem.Text = "&Contents";
+            // 
+            // toolStripSeparator5
+            // 
+            this.toolStripSeparator5.Name = "toolStripSeparator5";
+            this.toolStripSeparator5.Size = new System.Drawing.Size(160, 6);
             // 
             // aboutTelegramCMToolStripMenuItem
             // 
@@ -823,14 +994,72 @@
             this.aboutTelegramCMToolStripMenuItem.Text = "About";
             this.aboutTelegramCMToolStripMenuItem.Click += new System.EventHandler(this.aboutTelegramCMToolStripMenuItem_Click);
             // 
+            // helpToolStripMenuItem1
+            // 
+            this.helpToolStripMenuItem1.Name = "helpToolStripMenuItem1";
+            this.helpToolStripMenuItem1.Size = new System.Drawing.Size(163, 22);
+            this.helpToolStripMenuItem1.Text = "&Help";
+            this.helpToolStripMenuItem1.Click += new System.EventHandler(this.helpToolStripMenuItem1_Click);
+            // 
+            // txtChannelName
+            // 
+            this.txtChannelName.AutoSize = true;
+            this.txtChannelName.Location = new System.Drawing.Point(572, 63);
+            this.txtChannelName.Name = "txtChannelName";
+            this.txtChannelName.Size = new System.Drawing.Size(0, 13);
+            this.txtChannelName.TabIndex = 8;
+            // 
+            // txtBotName
+            // 
+            this.txtBotName.AutoSize = true;
+            this.txtBotName.Location = new System.Drawing.Point(572, 37);
+            this.txtBotName.Name = "txtBotName";
+            this.txtBotName.Size = new System.Drawing.Size(10, 13);
+            this.txtBotName.TabIndex = 9;
+            this.txtBotName.TabStop = true;
+            this.txtBotName.Text = "-";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(8, 144);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(38, 13);
+            this.label7.TabIndex = 36;
+            this.label7.Text = "Name:";
+            // 
+            // boxName
+            // 
+            this.boxName.Location = new System.Drawing.Point(73, 141);
+            this.boxName.Name = "boxName";
+            this.boxName.Size = new System.Drawing.Size(179, 20);
+            this.boxName.TabIndex = 35;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(8, 170);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(48, 13);
+            this.label8.TabIndex = 34;
+            this.label8.Text = "Address:";
+            // 
+            // boxAddress
+            // 
+            this.boxAddress.Location = new System.Drawing.Point(73, 167);
+            this.boxAddress.Name = "boxAddress";
+            this.boxAddress.Size = new System.Drawing.Size(179, 20);
+            this.boxAddress.TabIndex = 33;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(777, 431);
+            this.Controls.Add(this.txtBotName);
+            this.Controls.Add(this.txtChannelName);
             this.Controls.Add(this.txtChannelUser);
             this.Controls.Add(this.boxUser);
-            this.Controls.Add(this.txtBotName);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.boxToken);
@@ -838,7 +1067,7 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Telegram Channel Manager";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
@@ -864,6 +1093,9 @@
             this.groupBox7.PerformLayout();
             this.groupBox8.ResumeLayout(false);
             this.groupBox8.PerformLayout();
+            this.tabPage5.ResumeLayout(false);
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -878,7 +1110,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.Label txtBotName;
         private System.Windows.Forms.TextBox boxUser;
         private System.Windows.Forms.Label txtChannelUser;
         private System.Windows.Forms.Button btnSendMsg;
@@ -945,6 +1176,26 @@
         private System.Windows.Forms.TextBox boxFileCaption;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem aboutTelegramCMToolStripMenuItem;
+        private System.Windows.Forms.TabPage tabPage5;
+        private GMap.NET.WindowsForms.GMapControl gmap;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.CheckBox chkSilence5;
+        private System.Windows.Forms.TextBox boxLatitude;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox boxLongitude;
+        private System.Windows.Forms.Button btnSendLocation;
+        private System.Windows.Forms.RadioButton OpenStreetMap;
+        private System.Windows.Forms.RadioButton GoogleSatellite;
+        private System.Windows.Forms.RadioButton GoogleMap;
+        private System.Windows.Forms.Button btnUnZoom;
+        private System.Windows.Forms.Button btnZoom;
+        private System.Windows.Forms.LinkLabel txtChannelName;
+        private System.Windows.Forms.LinkLabel txtBotName;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox boxName;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox boxAddress;
     }
 }
 

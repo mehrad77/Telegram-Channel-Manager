@@ -27,7 +27,7 @@ namespace ChannelManager
         /// <param name="token11">Your bot Token</param>
         /// <param name="Username">Your channel username</param>
         /// <returns>The Bot Name</returns>
-        public static string set(string token11, string Username)
+        public static dynamic set(string token11, string Username)
         {
             var doc = "";
             channelUserName = "?chat_id=@" + Username;
@@ -52,9 +52,44 @@ namespace ChannelManager
 
 
             dynamic ans = JsonConvert.DeserializeObject(doc);
-            string id = ans.id;
-            string first_name = ans.result.first_name;
-            return first_name;
+            return ans;
+        }
+
+
+        /// <summary>
+        /// This methoud will send get User Profile Photos
+        /// </summary>
+        /// <param name=""></param>
+        /// <param name=""></param>
+        /// <param name=""></param>
+        public static dynamic getUserProfilePhotos(string user_id)
+        {
+            // It used to be "sendLocation" but now it's "sendVenue"
+            string doc = "";
+            try
+            {
+                HttpWebRequest myHttpWebRequest = (HttpWebRequest)WebRequest.Create(httpReq + token + "/getUserProfilePhotos"
+                + channelUserName + "&user_id=" + user_id);
+                HttpWebResponse myHttpWebResponse = (HttpWebResponse)myHttpWebRequest.GetResponse();
+
+                if (myHttpWebResponse.StatusCode == HttpStatusCode.OK)
+                {
+                    WebResponse response = myHttpWebRequest.GetResponse();
+                    StreamReader reader = new StreamReader(response.GetResponseStream());
+                    doc = reader.ReadToEnd();
+                    // ذخیره کردن جی‌سون بازگشتی از تلگرام
+                }
+                myHttpWebResponse.Close();
+            }
+            catch (WebException e)
+            {
+                return "ERROR!! " + e.Message + "\r\n" + doc; //+ e.Status;
+            }
+
+
+            dynamic ans = JsonConvert.DeserializeObject(doc);
+            string first_name = ans.result.photos;
+            return first_name
         }
 
 
@@ -216,6 +251,52 @@ namespace ChannelManager
             //string first_name = ans.result.first_name;
             return doc;
         }
+
+
+
+        /// <summary>
+        /// This methoud will send Geo Location
+        /// </summary>
+        /// <param name="latitude">latitude</param>
+        /// <param name="longitude">longitude</param>
+        /// <param name="disable_notification">Sends the message silently. iOS users will not receive a notification, Android users will receive a notification with no sound.</param>
+        public static string sendLocation(string latitude, string longitude, string title, string address, Boolean disable_notification)
+        {
+            // It used to be "sendLocation" but now it's "sendVenue"
+            string doc = "";
+            try
+            {
+                HttpWebRequest myHttpWebRequest = (HttpWebRequest)WebRequest.Create(httpReq + token + "/sendVenue"
+                + channelUserName + "&latitude=" + latitude + "&longitude=" + longitude + "&disable_notification=" + disable_notification);
+                HttpWebResponse myHttpWebResponse = (HttpWebResponse)myHttpWebRequest.GetResponse();
+
+                if (myHttpWebResponse.StatusCode == HttpStatusCode.OK)
+                {
+                    WebResponse response = myHttpWebRequest.GetResponse();
+                    StreamReader reader = new StreamReader(response.GetResponseStream());
+                    doc = reader.ReadToEnd();
+                    // ذخیره کردن جی‌سون بازگشتی از تلگرام
+                }
+                myHttpWebResponse.Close();
+            }
+            catch (WebException e)
+            {
+                return "ERROR!! " + e.Message + "\r\n" + doc; //+ e.Status;
+            }
+
+
+            dynamic ans = JsonConvert.DeserializeObject(doc);
+            //string id = ans.id;
+            //string first_name = ans.result.first_name;
+            return doc;
+        }
+
+
+
+
+
+
+
 
 
 

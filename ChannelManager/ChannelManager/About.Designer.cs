@@ -46,112 +46,70 @@
             // 
             // pictureBox1
             // 
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(200, 200);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label5.Location = new System.Drawing.Point(222, 50);
+            resources.ApplyResources(this.label5, "label5");
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(129, 20);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "Just a developer!\r\n";
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label6.Location = new System.Drawing.Point(215, -4);
+            resources.ApplyResources(this.label6, "label6");
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(348, 65);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "Mehrad Rousta";
             // 
             // pictureBox3
             // 
+            resources.ApplyResources(this.pictureBox3, "pictureBox3");
             this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(226, 179);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox3.TabIndex = 9;
             this.pictureBox3.TabStop = false;
             // 
             // lnkTweet
             // 
-            this.lnkTweet.AutoSize = true;
+            resources.ApplyResources(this.lnkTweet, "lnkTweet");
             this.lnkTweet.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lnkTweet.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.lnkTweet.Location = new System.Drawing.Point(259, 181);
             this.lnkTweet.Name = "lnkTweet";
-            this.lnkTweet.Size = new System.Drawing.Size(222, 30);
-            this.lnkTweet.TabIndex = 8;
             this.lnkTweet.TabStop = true;
-            this.lnkTweet.Text = "Twitter.com/Mehrad77";
             this.lnkTweet.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkTweet_LinkClicked);
             // 
             // pictureBox4
             // 
+            resources.ApplyResources(this.pictureBox4, "pictureBox4");
             this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(226, 131);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox4.TabIndex = 11;
             this.pictureBox4.TabStop = false;
             // 
             // lnkGithub
             // 
-            this.lnkGithub.AutoSize = true;
+            resources.ApplyResources(this.lnkGithub, "lnkGithub");
             this.lnkGithub.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lnkGithub.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.lnkGithub.Location = new System.Drawing.Point(259, 133);
             this.lnkGithub.Name = "lnkGithub";
-            this.lnkGithub.Size = new System.Drawing.Size(222, 30);
-            this.lnkGithub.TabIndex = 10;
             this.lnkGithub.TabStop = true;
-            this.lnkGithub.Text = "Github.com/Mehrad77";
             this.lnkGithub.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkGithub_LinkClicked);
             // 
             // pictureBox5
             // 
+            resources.ApplyResources(this.pictureBox5, "pictureBox5");
             this.pictureBox5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(226, 84);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox5.TabIndex = 13;
             this.pictureBox5.TabStop = false;
             // 
             // lnkWebsite
             // 
-            this.lnkWebsite.AutoSize = true;
+            resources.ApplyResources(this.lnkWebsite, "lnkWebsite");
             this.lnkWebsite.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lnkWebsite.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.lnkWebsite.Location = new System.Drawing.Point(259, 86);
             this.lnkWebsite.Name = "lnkWebsite";
-            this.lnkWebsite.Size = new System.Drawing.Size(124, 30);
-            this.lnkWebsite.TabIndex = 12;
             this.lnkWebsite.TabStop = true;
-            this.lnkWebsite.Text = "Mehrad77.ir";
             // 
             // About
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(563, 229);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.lnkWebsite);
             this.Controls.Add(this.pictureBox4);
@@ -161,8 +119,8 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.pictureBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "About";
-            this.Text = "About";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();

@@ -117,159 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="&gt;&gt;lnkTweet.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="lnkWebsite.Location" type="System.Drawing.Point, System.Drawing">
-    <value>259, 86</value>
-  </data>
-  <data name="&gt;&gt;lnkWebsite.Name" xml:space="preserve">
-    <value>lnkWebsite</value>
-  </data>
-  <data name="lnkWebsite.Size" type="System.Drawing.Size, System.Drawing">
-    <value>124, 30</value>
-  </data>
-  <data name="lnkGithub.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 15.75pt</value>
-  </data>
-  <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>129, 20</value>
-  </data>
-  <data name="lnkTweet.Location" type="System.Drawing.Point, System.Drawing">
-    <value>259, 181</value>
-  </data>
-  <data name="&gt;&gt;pictureBox4.Name" xml:space="preserve">
-    <value>pictureBox4</value>
-  </data>
-  <data name="&gt;&gt;pictureBox4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>About</value>
-  </data>
-  <data name="&gt;&gt;label6.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pictureBox4.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>222, 50</value>
-  </data>
-  <data name="pictureBox5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>32, 32</value>
-  </data>
-  <data name="&gt;&gt;pictureBox3.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="pictureBox4.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>AutoSize</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="lnkWebsite.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>215, -4</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;pictureBox3.Name" xml:space="preserve">
-    <value>pictureBox3</value>
-  </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.Name" xml:space="preserve">
-    <value>pictureBox1</value>
-  </data>
-  <data name="&gt;&gt;lnkWebsite.Type" xml:space="preserve">
-    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="label6.Text" xml:space="preserve">
-    <value>Mehrad Rousta</value>
-  </data>
-  <data name="&gt;&gt;lnkGithub.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="pictureBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;pictureBox3.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="lnkTweet.Size" type="System.Drawing.Size, System.Drawing">
-    <value>222, 30</value>
-  </data>
-  <data name="lnkWebsite.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
-  </data>
-  <data name="label5.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
-  </data>
-  <data name="pictureBox4.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAB
-        AwAAAQMB4GlWSgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAK4SURBVFhHtdc7
-        a1RRFAXgnSdBsdciiBiTKFgo8QfEBANpJIgRQcEuRG2tBRUEbWxESBXFFBaKYJ1CUawE341W2ijY+cbH
-        uNb17LDm3H3HyR1z4CMz+5y99pCZO7mxRqPRNqxeGIZ9MAfnEz5mjXu9UW+VsJjDGoRz8A5YaIVneHYw
-        ysqFRYc1CrfhJ+iQdrCHvaNRtguLhDULH0FD62DGbDSDygWzPrgEGvI/MLOvNK9UMFtKDWthqTSv6YnZ
-        vBxeK/NNM2X4GHxLh9xZ4AfxCDxKtXY8gaPAy/JMqjnOGGt6AVg98Ar0IE34wXSOH8wrcAoOwK6Ej1nj
-        3qGsZwI0kzirp9hPh2bSRm5Yw+pghuSpmWI/HVqWDbVfw+pghuSp5bRvO1IhMp4HrhbWXsnLcbadloK6
-        HgXWgXVDchVn21UpqI7ff4e1U3IVZ9s9KbjP0B2F1YHFq+wr5HM4295IwT2NgjrBTMl3b8G+SMG9j0I6
-        wUzJd5xtL6SgNkRBdTBLctVzsFtSUHuisDqYJbnqJhS3VNHmYhRWB7MkV3G2HZOC4h3NtihwNZiRsvJ8
-        4mwbgV+pkOMVsjsKbgd7U0aeS5w54gf1JuQ+PJDn/KRegC35gCpYW+EiRFeYK25OvGEIfqSNO7AODoL+
-        6viKX8I1KH1JYXUB/xzzzG/wvghnDRV9ErCQNukudEP0+bjsPTmsE3KulYWVHmnmvT+/gv3QXKofh9fw
-        CR7CZu/JYW0H76/CGSv/M+QBk+Df2R9gk+7/C9b61FuF2ZNNPfqkKJhNgd8b8pvqMGyE/vSzK+9xWAPA
-        BxFmTpV68kJRNJuG76ABbiDqIe7JOcWs6bAnKhLWODwGDaLVvgBmVN5ZhUWHxUuLd7zPwAP7o7PEPTnH
-        HvZWvmUUFnMMAd6Sn4z2FRavGp5tOfivhv0BoCpLBDOr0z0AAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="&gt;&gt;label5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="pictureBox1.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>StretchImage</value>
-  </data>
-  <data name="pictureBox3.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="pictureBox3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>32, 32</value>
-  </data>
-  <data name="lnkGithub.Text" xml:space="preserve">
-    <value>Github.com/Mehrad77</value>
-  </data>
-  <data name="&gt;&gt;label5.Name" xml:space="preserve">
-    <value>label5</value>
-  </data>
-  <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 12</value>
-  </data>
-  <data name="&gt;&gt;pictureBox3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="label6.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lnkTweet.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;label5.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="lnkTweet.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 15.75pt</value>
-  </data>
-  <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         /9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwg
@@ -943,23 +791,23 @@
         bJIbbJIbbE4r/AMMS0PQ8yqhDAAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="&gt;&gt;lnkWebsite.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>348, 65</value>
-  </data>
-  <data name="label5.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="pictureBox5.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
-  </data>
-  <data name="&gt;&gt;lnkGithub.Name" xml:space="preserve">
-    <value>lnkGithub</value>
-  </data>
-  <data name="&gt;&gt;lnkGithub.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="pictureBox4.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAB
+        AwAAAQMB4GlWSgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAK4SURBVFhHtdc7
+        a1RRFAXgnSdBsdciiBiTKFgo8QfEBANpJIgRQcEuRG2tBRUEbWxESBXFFBaKYJ1CUawE341W2ijY+cbH
+        uNb17LDm3H3HyR1z4CMz+5y99pCZO7mxRqPRNqxeGIZ9MAfnEz5mjXu9UW+VsJjDGoRz8A5YaIVneHYw
+        ysqFRYc1CrfhJ+iQdrCHvaNRtguLhDULH0FD62DGbDSDygWzPrgEGvI/MLOvNK9UMFtKDWthqTSv6YnZ
+        vBxeK/NNM2X4GHxLh9xZ4AfxCDxKtXY8gaPAy/JMqjnOGGt6AVg98Ar0IE34wXSOH8wrcAoOwK6Ej1nj
+        3qGsZwI0kzirp9hPh2bSRm5Yw+pghuSpmWI/HVqWDbVfw+pghuSp5bRvO1IhMp4HrhbWXsnLcbadloK6
+        HgXWgXVDchVn21UpqI7ff4e1U3IVZ9s9KbjP0B2F1YHFq+wr5HM4295IwT2NgjrBTMl3b8G+SMG9j0I6
+        wUzJd5xtL6SgNkRBdTBLctVzsFtSUHuisDqYJbnqJhS3VNHmYhRWB7MkV3G2HZOC4h3NtihwNZiRsvJ8
+        4mwbgV+pkOMVsjsKbgd7U0aeS5w54gf1JuQ+PJDn/KRegC35gCpYW+EiRFeYK25OvGEIfqSNO7AODoL+
+        6viKX8I1KH1JYXUB/xzzzG/wvghnDRV9ErCQNukudEP0+bjsPTmsE3KulYWVHmnmvT+/gv3QXKofh9fw
+        CR7CZu/JYW0H76/CGSv/M+QBk+Df2R9gk+7/C9b61FuF2ZNNPfqkKJhNgd8b8pvqMGyE/vSzK+9xWAPA
+        BxFmTpV68kJRNJuG76ABbiDqIe7JOcWs6bAnKhLWODwGDaLVvgBmVN5ZhUWHxUuLd7zPwAP7o7PEPTnH
+        HvZWvmUUFnMMAd6Sn4z2FRavGp5tOfivhv0BoCpLBDOr0z0AAAAASUVORK5CYII=
+</value>
   </data>
   <data name="pictureBox5.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -976,122 +824,4 @@
         6d8AAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="pictureBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>200, 200</value>
-  </data>
-  <data name="lnkGithub.Location" type="System.Drawing.Point, System.Drawing">
-    <value>259, 133</value>
-  </data>
-  <data name="pictureBox4.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="&gt;&gt;pictureBox5.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="lnkTweet.Text" xml:space="preserve">
-    <value>Twitter.com/Mehrad77</value>
-  </data>
-  <data name="pictureBox3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>226, 179</value>
-  </data>
-  <data name="&gt;&gt;lnkTweet.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="label5.Text" xml:space="preserve">
-    <value>Just a developer!
-</value>
-  </data>
-  <data name="&gt;&gt;lnkWebsite.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="pictureBox3.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>AutoSize</value>
-  </data>
-  <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="lnkGithub.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lnkWebsite.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 15.75pt</value>
-  </data>
-  <data name="label6.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 36pt</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>About Developer</value>
-  </data>
-  <data name="lnkGithub.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="label6.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;label6.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="pictureBox5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>226, 84</value>
-  </data>
-  <data name="&gt;&gt;lnkGithub.Type" xml:space="preserve">
-    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pictureBox4.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="pictureBox5.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>AutoSize</value>
-  </data>
-  <data name="lnkGithub.Size" type="System.Drawing.Size, System.Drawing">
-    <value>222, 30</value>
-  </data>
-  <data name="lnkTweet.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lnkWebsite.Text" xml:space="preserve">
-    <value>Mehrad77.ir</value>
-  </data>
-  <data name="pictureBox4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>226, 131</value>
-  </data>
-  <data name="&gt;&gt;pictureBox5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lnkTweet.Type" xml:space="preserve">
-    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>563, 229</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="pictureBox4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>32, 32</value>
-  </data>
-  <data name="&gt;&gt;pictureBox5.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;pictureBox5.Name" xml:space="preserve">
-    <value>pictureBox5</value>
-  </data>
-  <data name="&gt;&gt;lnkTweet.Name" xml:space="preserve">
-    <value>lnkTweet</value>
-  </data>
-  <data name="label5.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;label6.Name" xml:space="preserve">
-    <value>label6</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>aa</value>
-  </metadata>
 </root>

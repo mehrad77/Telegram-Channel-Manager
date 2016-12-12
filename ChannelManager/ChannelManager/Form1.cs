@@ -20,7 +20,14 @@ namespace ChannelManager
 
         private void buttonSet_Click(object sender, EventArgs e)
         {
-            txtBotName.Text = botAPI.set(boxToken.Text, boxUser.Text);
+            dynamic ans = botAPI.set(boxToken.Text, boxUser.Text);
+            string username = ans.result.username;
+            string botID = ans.result.id;
+            botAPI.
+
+
+            txtBotName.Text = username;
+            txtChannelName.Text = boxUser.Text;
             System.IO.File.WriteAllText("token.txt", boxToken.Text);
             System.IO.File.WriteAllText("user.txt", boxUser.Text);
             if (txtBotName.Text != "ERROR!! Your Token is invalid!") tabControl1.Enabled = true;
@@ -36,7 +43,24 @@ namespace ChannelManager
             //--
             if (boxUser.Text != "" && boxToken.Text != "")
                 btnSet.Enabled = true;
+            //--
 
+            //--- GMap
+            gmap.MapProvider = GMap.NET.MapProviders.GoogleMapProvider.Instance;
+            GMap.NET.GMaps.Instance.Mode = GMap.NET.AccessMode.ServerAndCache;
+            gmap.SetPositionByKeywords("Tehran, Iran");
+            boxLatitude.Text = gmap.Position.Lat.ToString().Replace('/','.');;
+            boxLongitude.Text = gmap.Position.Lng.ToString().Replace('/','.');;
+            gmap.DragButton = MouseButtons.Left;
+            /**
+            GMap.NET.WindowsForms.GMapOverlay markers = new GMap.NET.WindowsForms.GMapOverlay("markers");
+            GMap.NET.WindowsForms.GMapMarker marker =
+                new GMap.NET.WindowsForms.Markers.GMarkerGoogle(
+                    new GMap.NET.PointLatLng(48.8617774, 2.349272),
+                    GMap.NET.WindowsForms.Markers.GMarkerGoogleType.blue_pushpin);
+            markers.Markers.Add(marker);
+            gmap.Overlays.Add(markers);
+             * **/
         }
 
         private void boxUser_TextChanged(object sender, EventArgs e)
@@ -54,6 +78,34 @@ namespace ChannelManager
             else
                 btnSet.Enabled = false;
         }
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            /**MessageBox.Show(
+                "Hello World!",
+                "About Developer",
+                MessageBoxButtons.OKCancel,
+                MessageBoxIcon.Information,
+                MessageBoxDefaultButton.Button1
+                );**/
+            About AboutForm = new About();
+            AboutForm.ShowDialog();
+        }
+
+        private void aboutTelegramCMToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AboutThis AboutThisForm = new AboutThis();
+            AboutThisForm.ShowDialog();
+        }
+        private void helpToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            help help = new help();
+            help.Show();
+        }
+
+
+
+
+
 
         //---------------------------------------------------
         private void btnSendMsg_Click(object sender, EventArgs e)
@@ -70,33 +122,48 @@ namespace ChannelManager
         {
             MessageBox.Show(botAPI.sendAudio(boxAudioURL.Text, boxAudioCaption.Text, chkSilence3.Checked, boxArtist.Text, boxTitle.Text));
         }
+        //---------------------------------------------------
         private void btnSendFile_Click(object sender, EventArgs e)
         {
             MessageBox.Show(botAPI.sendDocument(boxFileURL.Text, boxFileURL.Text, chkSilence4.Checked));
         }
-
-        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        //---------------------------------------------------
+        private void btnSendLocation_Click(object sender, EventArgs e)
         {
-            /**MessageBox.Show(
-                "Hello World!",
-                "About Developer",
-                MessageBoxButtons.OKCancel,
-                MessageBoxIcon.Information,
-                MessageBoxDefaultButton.Button1
-                );**/
-            About AboutForm = new About();
-            AboutForm.Show();
+             MessageBox.Show(botAPI.sendLocation(boxLatitude.Text,boxLongitude.Text, boxName.Text, boxAddress.Text,chkSilence5.Checked));
+        }
+        //---------------------------------------------------
+
+
+
+        //---------------------------------------------- Gmap Things ----------------------------------------------
+        private void btnZoom_Click(object sender, EventArgs e)
+        {
+            gmap.Zoom += 1;
         }
 
-        private void aboutTelegramCMToolStripMenuItem_Click(object sender, EventArgs e)
+        private void btnUnZoom_Click(object sender, EventArgs e)
         {
-            AboutThis AboutThisForm = new AboutThis();
-            AboutThisForm.Show();
+            gmap.Zoom -= 1;
         }
-        private void helpToolStripMenuItem1_Click(object sender, EventArgs e)
+
+        private void gmap_Click(object sender, EventArgs e)
         {
-            help help = new help();
-            help.Show();
+            boxLatitude.Text = gmap.Position.Lat.ToString().Replace('/','.');
+            boxLongitude.Text = gmap.Position.Lng.ToString().Replace('/','.');
+        }
+        private void GoogleMap_CheckedChanged(object sender, EventArgs e)
+        {
+            gmap.MapProvider = GMap.NET.MapProviders.GoogleMapProvider.Instance;
+        }
+        private void OpenStreetMap_CheckedChanged(object sender, EventArgs e)
+        {
+            gmap.MapProvider = GMap.NET.MapProviders.OpenCycleMapProvider.Instance;
+        }
+
+        private void GoogleSatellite_CheckedChanged(object sender, EventArgs e)
+        {
+            gmap.MapProvider = GMap.NET.MapProviders.BingHybridMapProvider.Instance;
         }
         //---------------------------------------------------
 
