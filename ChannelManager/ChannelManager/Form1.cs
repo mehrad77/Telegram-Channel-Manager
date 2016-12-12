@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -23,7 +24,15 @@ namespace ChannelManager
             dynamic ans = botAPI.set(boxToken.Text, boxUser.Text);
             string username = ans.result.username;
             string botID = ans.result.id;
-            botAPI.
+
+            //-------
+            var request = WebRequest.Create(botAPI.getUserProfilePhotos(botID));
+            using (var response = request.GetResponse())
+            using (var stream = response.GetResponseStream())
+            {
+                picBot.Image = Bitmap.FromStream(stream);
+            }
+            //-------
 
 
             txtBotName.Text = username;

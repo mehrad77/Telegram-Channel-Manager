@@ -66,6 +66,7 @@ namespace ChannelManager
         {
             // It used to be "sendLocation" but now it's "sendVenue"
             string doc = "";
+            string file_path = "https://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&f=y";
             try
             {
                 HttpWebRequest myHttpWebRequest = (HttpWebRequest)WebRequest.Create(httpReq + token + "/getUserProfilePhotos"
@@ -86,10 +87,39 @@ namespace ChannelManager
                 return "ERROR!! " + e.Message + "\r\n" + doc; //+ e.Status;
             }
 
+            
 
-            dynamic ans = JsonConvert.DeserializeObject(doc);
-            string first_name = ans.result.photos;
-            return first_name
+
+            // get file ---------------------------
+            try
+            {
+                int first = doc.IndexOf("\"file_id\":\"");
+                int last = doc.IndexOf("\",\"file_size\"");
+                string file_id = doc.Substring((first + 11), ((last - 11) - first));
+
+
+                HttpWebRequest myHttpWebRequest = (HttpWebRequest)WebRequest.Create(httpReq + token + "/getFile"
+                + channelUserName + "&file_id=" + file_id);
+                HttpWebResponse myHttpWebResponse = (HttpWebResponse)myHttpWebRequest.GetResponse();
+
+                if (myHttpWebResponse.StatusCode == HttpStatusCode.OK)
+                {
+                    WebResponse response = myHttpWebRequest.GetResponse();
+                    StreamReader reader = new StreamReader(response.GetResponseStream());
+                    doc = reader.ReadToEnd();
+                    // ذخیره کردن جی‌سون بازگشتی از تلگرام
+                }
+                myHttpWebResponse.Close();
+                dynamic ans = JsonConvert.DeserializeObject(doc);
+                file_path = "https://api.telegram.org/file/bot" + token + "/" + ans.result.file_path;
+            }
+            catch (Exception)
+            {
+
+            }
+
+
+            return file_path;
         }
 
 
@@ -126,7 +156,6 @@ namespace ChannelManager
 
 
             dynamic ans = JsonConvert.DeserializeObject(doc);
-            //string id = ans.id;
             //string first_name = ans.result.first_name;
             return doc;
         }
